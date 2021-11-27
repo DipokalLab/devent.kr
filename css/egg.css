@@ -1,0 +1,21 @@
+html, body{
+  height: 100%;
+  margin: 0% !important;
+}
+
+.center {
+  height: 100%;
+}
+
+.btn-round {
+  border-radius: 48px !important;
+
+}
+
+.btn-big {
+  padding: 70px !important;
+}
+
+.icon-xl {
+  font-size: 36px;
+}

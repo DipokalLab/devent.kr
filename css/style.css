@@ -1,0 +1,15 @@
+body{
+  margin: 28px;
+  margin-top: 36px;
+}
+
+.text-title{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+
+}
+
+.text-body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
