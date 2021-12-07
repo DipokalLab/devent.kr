@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+      <!--
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128970407-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-128970407-1');
+    </script>
+
+      -->
+
+
+    <meta charset="utf-8">
+    <meta name="url" content="https://devent.kr">
+    <meta name="identifier-URL" content="https://devent.kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="https://cdn.devent.kr/img/logo2x.ico">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devent.kr/">
+    <meta property="og:title" content="콜라츠 추측 그래프">
+    <meta property="og:image" content="https://devent.kr/img/head.png">
+    <meta property="og:description" content="콜라츠 추측은 콜라 한 병 마시는 순간 어떤 수든 421로 반복하게 만듭니다. 놀랍죠! ">
+    <meta property="og:site_name" content="DeVent Special Light">
+
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="768">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="콜라츠 추측 그래프" />
+    <meta name="twitter:description" content="콜라츠 추측은 콜라 한 병 마시는 순간 어떤 수든 421로 반복하게 만듭니다. 놀랍죠! " />
+    <meta name="twitter:image" content="https://devent.kr/img/head.png" />
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+
+    <title>콜라츠 추측 그래프</title>
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
+    <link rel="stylesheet" href="https://devent.kr/css/style.css">
+    <link rel="stylesheet" href="https://devent.kr/css/collatz.css">
+
+  </head>
+  <body >
+
+
+
+    <div class="text-center center" id="background" style="background-color: #ffffff;">
+      <h1 class="mb-4 mt-4 title">The Collatz Conjecture</h1>
+      <canvas id="myChart" class="chart-max"></canvas>
+
+      <div class="fixed-bottom mb-3 mt-3 mr-3 ml-3">
+        <div class="input-group">
+
+          <input type="number" placeholder="시작 수" id="number_x" class="form-control" value="7">
+          <input type="number" placeholder="반복 수" id="number_range" class="form-control" value="22">
+          <div class="input-group-append">
+            <button class="btn btn-primary btn-lg btn-block" id="start">Start</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+
+      var config = {
+        type: 'line',
+          data: {
+            labels: [],
+
+            datasets: [{
+              data: [],
+              fill: false,
+              borderColor: 'rgb(75, 192, 192)',
+              tension: 0.1
+            }]
+          }
+      }
+
+      var myChart = new Chart(ctx, config);
+
+      let x = 7;
+
+
+      document.getElementById('start').onclick = function(){
+        var data = config.data.datasets[0].data;
+        var labels = config.data.labels;
+
+        x = document.getElementById('number_x').value
+        number_range = document.getElementById('number_range').value
+
+        data[0] = x
+        labels[0] = 0
+
+        for(var i=1; i<number_range; i++){
+          labels[i] = i
+
+          if (x%2 == 0) {
+            x = x/2
+            data[i] = x
+          } else {
+            x = x*3+1
+            data[i] = x
+          }
+        }
+
+        myChart.update();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="url" content="https://devent.kr">
+    <meta name="identifier-URL" content="https://devent.kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="https://cdn.devent.kr/img/logo2x.ico">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devent.kr/">
+    <meta property="og:title" content="오늘 빠진 머리카락">
+    <meta property="og:image" content="https://devent.kr/img/head.png">
+    <meta property="og:description" content="하루 평균 빠진 머리카락은? 지금 바로 확인하세요">
+    <meta property="og:site_name" content="오늘 빠진 머리카락">
+
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="768">
+    
+    <meta name="twitter:card" content="summary" /> 
+    <meta name="twitter:title" content="오늘 빠진 머리카락" /> 
+    <meta name="twitter:description" content="하루 평균 빠진 머리카락은? 지금 바로 확인하세요" /> 
+    <meta name="twitter:image" content="https://devent.kr/img/head.png" /> 
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+
+    <title>오늘 빠진 머리카락</title>
+
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shards-ui/3.0.0/css/shards.min.css" integrity="sha512-ATPNLwY6zsriAW9aWaVyzCz5bRunkyNF3m7Es87HrwwhcJ2LwGDHnkPJzNRUOZI4fUcg6kEoNqC/rAUfvRizRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="/css/hair.css"/>
+
+  </head>
+  <body>
+
+    <div class="modal fade" id="modal_nav" role="dialog_modal_nav">
+      <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content modal-blur">
+          <div class="modal-body">
+            <h3 class="modal-title text-dark" id="modal_feed_title">자라나라 머리머리</h3>
+            <br>
+
+            <b class="modal-title text-dark">하루 평균 머리카락은 50~100개 정도 빠진다고 알려져 있습니다. 이 상태라면 1년 안에 전 국민이 탈모가 됩니다.
+              그러나 머리카락은 빠진 만큼 자라기 때문에 탈모가 쉽게 일어나지 않습니다.</b>
+
+            <button class="btn btn-white btn-block mt-4 rounded" onclick="location.href='https://hhj.devent.kr/'"><i class="fas fa-user-circle"></i> 이거 만든 사람</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center center" id="background" style="background-color: #ffffff;">
+      <div class="align-self-center pl-2 pr-2">
+        <h2 class="title text-center">오늘 빠진 머리카락은 <b id="t1">0</b>개 입니다</h2>
+      </div>
+    </div>
+
+
+    <div class="fixed-bottom ml-4 mr-4 mt-2 mb-4">
+      <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#modal_nav"><i class="fas fa-question-circle"></i> 머리카락은 왜 빠지나?</button>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shards-ui/3.0.0/js/shards.min.js" integrity="sha512-pY3v/NW9hYmsCbTOeU6NHkNbaTAAGXLTZ27i1MIqHVLwniv/0xt26F5vSKI3jr2bZBJP3k2jRvlilMCp3E1bKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      let day_out = 80; // 하루 평균 빠지는 머리 (개수)
+      let day_in = 0.03; // 하루 평균 자라는 머리 (cm)
+
+      let sec_out = day_out/24/60/60; // 1초 빠지는 머리
+      let sec_in = day_in/24/60/60; // 1초 자라는 머리
+
+      today = new Date();   
+
+      seconds = today.getSeconds()+(today.getMinutes()*60)+(today.getHours()*60*60); 
+      document.querySelector("#t1").innerHTML = (sec_out*seconds).toFixed(5)
+
+      setInterval(function () {
+        today = new Date();   
+
+        seconds = today.getSeconds()+(today.getMinutes()*60)+(today.getHours()*60*60); 
+        document.querySelector("#t1").innerHTML = (sec_out*seconds).toFixed(5)
+      }, 1000)
+
+
+      function changeColor(color) {
+        if (color == 'dark') { // dark
+          document.querySelector('#background').style.backgroundColor = '#121212';
+        } else if (color == 'light') {
+          document.querySelector('#background').style.backgroundColor = '#ffffff';
+        } else if (color == 'red') {
+          document.querySelector('#background').style.backgroundColor = '#de2f46';
+        } else if (color == 'blue') {
+          document.querySelector('#background').style.backgroundColor = '#2f52de';
+        } else if (color == 'green') {
+          document.querySelector('#background').style.backgroundColor = '#26b809';
+        }
+      }
+    </script>
+  </body>
+</html>

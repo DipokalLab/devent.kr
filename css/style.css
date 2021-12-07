@@ -13,3 +13,16 @@ body{
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
 }
+
+.icon-sm {
+  font-size: 10px !important;
+}
+
+.icon-lg {
+  font-size: 32px !important;
+}
+
+.link-normal {
+  color: inherit; 
+
+}
