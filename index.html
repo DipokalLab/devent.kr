@@ -29,23 +29,107 @@
     <meta name="twitter:description" content="기술 기반 스타트업 데벤트 입니다." />
     <meta name="twitter:image" content="https://devent.kr/img/head.png" />
 
-    <link rel="icon" href="https://cdn.devent.kr/img/logo2x.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap">
 
     <title>DeVent</title>
 
     <!-- CSS Dependencies -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shards-ui/3.0.0/css/shards.min.css" integrity="sha512-ATPNLwY6zsriAW9aWaVyzCz5bRunkyNF3m7Es87HrwwhcJ2LwGDHnkPJzNRUOZI4fUcg6kEoNqC/rAUfvRizRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
+
     <link rel="stylesheet" href="/css/style.css">
 
   </head>
   <body>
-    <h1 class="text-primary text-title">DeVent</h1> <br>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-blur fixed-top">
+      <div class="container-fluid px-4">
+          <a class="navbar-brand" href="/">DeVent</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mr-2">
+            </ul>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center" id="login_box">
+              <button class="btn btn-white font-weight-md text-dark btn-sm px-3 me-sm-3 btn-rounded" onclick="location.href = 'https://github.com/Team-DeVent'"><i class="fab fa-github"></i></button>
+            </div>
+          </div>
+      </div>
+    </nav>
 
+    <header class="bg-white py-5">
+      <div class="container px-5 pt-4 pb-2">
+          <div class="row gx-5 justify-content-center">
+              <div class="col-lg-6">
+                  <div class="text-center my-5">
+                      <h2 class="display-5 fw-bolder text-dark font-weight-lg mb-2">DeVent</h2>
+                      <p class="lead text-dark-50 font-weight-md mb-4" id="intro">기술을 윤리적 관점으로 바라봅니다.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </header>
+
+
+    <div class="container-fluid px-4">
+      <div class="row">
+        <div class="col-lg-3 mt-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Smoother</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Project</h6>
+              <p class="card-text">소셜미디어의 대안을 만듭니다.</p>
+              <div class="d-grid gap-2">
+                <button class="btn color-blue-100 text-primary" onclick="window.open('https://smoother.kr')"><i class="fas fa-globe-americas"></i> 바로가기</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mt-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">devent-frame</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Github</h6>
+              <p class="card-text">NodeJS 템플릿 프로젝트.</p>
+              <div class="d-grid gap-2">
+                <button class="btn color-blue-100 text-primary" onclick="window.open('https://github.com/Team-DeVent/devent-frame')"><i class="fab fa-github"></i> 바로가기</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mt-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Smoother Editor</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Sub Project</h6>
+              <p class="card-text">마크다운 에디터의 대안을 만듭니다.</p>
+              <div class="d-grid gap-2">
+                <button class="btn color-blue-100 text-primary" onclick="window.open('http://editor.smoother.kr')"><i class="fas fa-globe-americas"></i> 바로가기</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mt-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Instagram</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Site</h6>
+              <p class="card-text">인스타그램.</p>
+              <div class="d-grid gap-2">
+                <button class="btn color-blue-100 text-primary" onclick="window.open('https://www.instagram.com/devent.official/')"><i class="fab fa-instagram"></i> 바로가기</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      
     <div class="alert alert-light rounded">
       <b class='text-body'>2021년 4월 23일 이후로 데벤트의 일부 서비스가 종료됩니다.</b> <br>
       <b class='text-body'>팀의 리뉴얼 작업과 앞으로의 행보를 알고 싶으시다면 아래 인스타그램으로 방문 바랍니다!</b>
@@ -54,21 +138,24 @@
       <b class='text-body'>2021년 11월 27일 이후로 데벤트의 모든 서비스가 종료됩니다.</b> <br>
       <b class='text-body'>새롭게 진행중인 프로젝트로는 <a href="https://smoother.kr/" target="_blank" rel="noopener noreferrer">스무더 <i class="fas fa-link icon-sm"></i></a>가 있습니다.</b>
     </div>
+    
     <br> 
 
-    <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://www.instagram.com/devent.official/')" ><i class="fab fa-instagram"></i> 인스타그램</button>
     <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://hhj.devent.kr/')" ><i class="fas fa-globe-americas"></i> HHJ</button>
 
     <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/egg.html')" ><i class="fas fa-globe-americas"></i> Egg</button>
-    <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/the_collatz_conjecture.html')" ><i class="fas fa-globe-americas"></i> The Collatz Conjecture</button>
-    <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/file_validation.html')" ><i class="fas fa-globe-americas"></i> File Validation</button>
+    <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/the_collatz_conjecture.html')" ><i class="fas fa-globe-americas"></i> Collatz</button>
+    <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/file_validation.html')" ><i class="fas fa-globe-americas"></i> File</button>
     <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/hair.html')" ><i class="fas fa-globe-americas"></i> Hair</button>
     <button type="button" class="btn btn-light text-body mb-2" onclick="window.open('https://devent.kr/page/rank.html')" ><i class="fas fa-globe-americas"></i> Rank</button>
 
 
+    </div>
+
+
+
     <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>

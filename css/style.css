@@ -26,3 +26,43 @@ body{
   color: inherit; 
 
 }
+
+.color-blue-100 {
+  background-color: #dbe9fd;
+}
+
+.navbar-blur {
+  background-color: #ffffffd5;
+  -webkit-backdrop-filter: saturate(100%) blur(20px);
+  backdrop-filter: saturate(100%) blur(20px);
+}
+
+.font-weight-lg {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700 !important;
+}
+.font-weight-md {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500 !important;
+}
+
+.font-size-md {
+  font-size: 18px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.card {
+  outline: none;
+  box-shadow: none !important;
+  background-color: #f0f2f4d0;
+}
+
+.alert-light{
+  background-color: #f0f2f4d0 !important;
+  border-radius: .625rem !important;
+}
+
+.btn {
+  border-radius: .625rem !important;
+
+}
