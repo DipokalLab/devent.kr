@@ -51,3 +51,18 @@
   background-color: #f0f2f4d0 !important;
   border-radius: .625rem !important;
 }
+
+
+.rounded {
+  border-radius: .625rem !important;
+
+}
+
+.body-header {
+  padding-top: 45vh !important;
+  padding-bottom: 150vh !important;
+}
+
+.div-hide {
+  display: none !important;
+}

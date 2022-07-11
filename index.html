@@ -39,23 +39,118 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Team-DeVent/devent-designsystem/dist/style.css"/>
 
     <link rel="stylesheet" href="/css/style.css">
-  </head>
 
+    <style>
+      .container {
+        padding: 15vh 15vh;
+      }
+      .container-fluid {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+
+      }
+      .img-padd {
+        padding: 13vh 4vh;
+      }
+    </style>
+
+  </head>
   <body>
 
-    <dds-header 
-      header-title="DeVent"
-      header-sub-title="기술을 윤리적 관점으로 바라봅니다.">
-    </dds-header>
-
-
     <dds-navbar nav-title="DeVent" nav-fixed="top">
-      <dds-navbar-item item-link="https://github.com/Team-DeVent"><i class="fab fa-github"></i></dds-navbar-item>
+      <dds-navbar-item item-link="https://github.com/Team-DeVent"><i class="fab fa-github"></i> 깃허브</dds-navbar-item>
+      <dds-navbar-item item-link="https://blog.devent.kr/"><i class="fas fa-align-left"></i> 팀블로그</dds-navbar-item>
     </dds-navbar>
 
+    <header class="container-fluid body-header">
+      <div class="row justify-content-center align-items-start">
+        <h1 class="col-12 align-self-center  position-fixed text-center" id="header_title">We think fundamentally.</h1>
+       </div>
+    </header>
 
-    <div class="container-fluid px-4 my-5">
+    <!--
+
+    <div class="container px-4 my-5 text-start">
       <div class="row">
+        <h6 class="text-secondary font-weight-md">핵심 가치</h6>
+        <h2 class="font-weight-lg">근본적으로 사고합니다.</h2>
+
+        <div class="col-lg-4 mt-4">
+            <img src="img/gc.png" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="col-lg-8 mt-4">
+          <div class="alert alert-light rounded">
+            <b>데벤트는 세상을 근본적으로 바라봅니다. 근본없는 결과와 과정은 없으니까. 끊임없이 질문하고 답변합니다. 그러면서 문제를 명확하게 정의하게 되고, 올바른 가치를 추구할 수 있다고 믿습니다.</b>
+          </div>
+
+          <div class="alert alert-light rounded">
+            <b>우리는 "Invent Inside Sandbox" 라는 슬로건을 기반으로 나아갑니다. 모든 발명에는 실험실이 필요하듯이, 우리는 실험실을 만듭니다.</b>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+
+
+
+
+    <br>
+    <!--
+    <div class="container px-4 my-5 text-end">
+      <div class="row">
+        <h6 class="text-secondary font-weight-md">장기적인 비전</h6>
+        <h2 class="font-weight-lg">질문을 상식으로 만듭니다.</h2>
+
+        <div class="row p-0 m-0">
+          <div class="col-lg-4 mt-4">
+
+          </div>
+          <div class="col-lg-8 mt-4 text-center">
+            <div style="background-image: url('/img/bg-ins.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; background-color: rgba(0, 0, 0, 0.498); background-blend-mode: darken;" class="img-fluid img-padd text-light rounded" alt="">
+            
+              <h4 class="font-weight-lg">질문이 패러다임을 바꿀때까지,</h4>
+            
+            </div> 
+          </div>
+        </div>
+
+        <div class="row p-0 m-0">
+          <div class="col-lg-8 mt-4 text-center">
+            <div style="background-image: url('/img/bg-mix.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; background-color: rgba(0, 0, 0, 0.498); background-blend-mode: darken;" class="img-fluid img-padd text-light rounded" alt="">
+            
+              <h4 class="font-weight-lg">근본적인 질문을 던집니다.</h4>
+            
+            </div> 
+          </div>
+        </div>
+
+        <div class="row p-0 m-0">
+          <div class="col-lg-4 mt-4">
+
+          </div>
+          <div class="col-lg-8 mt-4 text-center">
+            <div style="background-image: url('/img/bg-une.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; background-color: rgba(0, 0, 0, 0.498); background-blend-mode: darken;" class="img-fluid img-padd text-light rounded" alt="">
+            
+              <h4 class="font-weight-lg">그리고 질문에 대답합니다.</h4>
+            
+            </div> 
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  -->
+    
+
+
+    <br>
+    <div class="container  px-4 my-5">
+      <div class="row">
+        <h6 class="text-secondary font-weight-md">관련 링크</h6>
+        <h2 class="font-weight-lg">환영합니다 👋</h2>
+
         <div class="col-lg-3 mt-4">
           <div class="card">
             <div class="card-body">
@@ -110,6 +205,8 @@
 
       </div>
 
+
+
       <br>
       
     <div class="alert alert-light rounded">
@@ -134,6 +231,19 @@
 
     </div>
 
+    <br>
+    <div class="container-fluid text-center bg-dark">
+      <div class="row">
+        <h2 class="font-weight-lg text-light">더 깊이있는 소식을 알고싶다면?</h2>
+        <div class="d-grid gap-2 col-10 col-sm-7 col-lg-4 mx-auto mt-3">
+          <button class="btn btn-blue-fill" onclick="location.href = 'https://blog.devent.kr/'"><i class="fas fa-align-left"></i> 블로그 방문하기</button>
+
+        </div>
+
+
+      </div>
+    </div>
+
 
     <dds-footer
       project-title="DeVent v7"
@@ -146,6 +256,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/Team-DeVent/devent-designsystem/dist/main.js"></script>
+
+    <script>
+      window.addEventListener('scroll', () => { 
+        document.getElementById("header_title").style.opacity = (800- window.scrollY)/500
+
+        if (window.scrollY > 900) {
+          document.querySelector("#header_title").classList.add("div-hide")
+        } else {
+          document.querySelector("#header_title").classList.remove("div-hide")
+        }
+      });
+    </script>
 
   </body>
 </html>
