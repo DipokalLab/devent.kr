@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "devent.kr",
+  "version": "1.0.0",
+  "description": "devent.kr Archive.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DipokalLab/devent.kr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DipokalLab/devent.kr/issues"
+  },
+  "homepage": "https://github.com/DipokalLab/devent.kr#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
